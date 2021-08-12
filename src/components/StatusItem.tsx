@@ -10,7 +10,11 @@ interface StatusItemProps {
 function StatusItem(props: StatusItemProps): JSX.Element {
   return (
     <li>
-      {props.emoji} <a href="#">{props.username}</a> <small>&#40;{formTimeString(props.timeAgo.n, props.timeAgo.unit)} ago&#41;</small>: {props.content}
+      {props.emoji} <a href="#">{props.username}</a>{" "}
+      <small>
+        &#40;{formTimeString(props.timeAgo.n, props.timeAgo.unit)} ago&#41;
+      </small>
+      : {props.content}
     </li>
   );
 }
